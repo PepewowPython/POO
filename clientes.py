@@ -1,3 +1,4 @@
+import json
 clientes = [
     {
         'id': 1,
@@ -90,3 +91,5 @@ clientes = [
         'correo': 'javier.ramirez@gmail.com'
     }
 ]
+with open("clientes.json", "w", encoding="utf-8") as archivo:
+    json.dump(clientes, archivo, ensure_ascii=False, indent=4)

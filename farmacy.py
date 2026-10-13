@@ -1,3 +1,5 @@
+import json
+
 #@author: Jereny Chica Tapasco
 #@Fecha: 6-10-2026
 #@Descripción: Ejercicio practico de manejo de diccionarios 
@@ -117,3 +119,8 @@ print(
     f"con un precio de {producto_mas_caro['precio']}"
 )
 print(f"El promedio de precio de los productos es: {promedio_precio}")
+
+with open("productos.json", "w", encoding="utf-8") as archivo:
+    json.dump(productos, archivo, ensure_ascii=False, indent=4)
+
+print("Los productos fueron guardados en productos.json")
